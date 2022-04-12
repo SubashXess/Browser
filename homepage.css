@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("blur_one_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 20px;
+  display: grid;
+  place-items: center;
+}
+
+.main_text {
+  position: relative;
+  top: 80px;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-weight: 800;
+  text-shadow: 5px 5px 10px rgb(170, 170, 170);
+}
+
+::selection {
+  color: #fff;
+  background: #664aff;
+}
+
+.wrapper {
+  max-width: 840px;
+  margin: 150px auto;
+}
+
+.wrapper .search-input {
+  background: #fff;
+  width: 640px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input input {
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  background: #fff;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.input_bar:hover {
+  background: rgb(212, 212, 212);
+}
+
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+}
+.autocom-box li:hover {
+  background: #efefef;
+}
+
+.search-input .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #858585;
+  cursor: pointer;
+}
+
+.shortcut_button {
+  display: inline-flex;
+}
+
+.shortcut_button .icon {
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.shortcut_button .icon span {
+  display: block;
+  height: 60px;
+  width: 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.shortcut_button .icon span i {
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.shortcut_button .icon:hover span {
+  color: #fff;
+}
+
+.shortcut_button .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.shortcut_button .icon:hover .tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.shortcut_button .icon .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.shortcut_button .icon:hover span,
+.shortcut_button .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.shortcut_button .facebook:hover span,
+.shortcut_button .facebook:hover .tooltip,
+.shortcut_button .facebook:hover .tooltip::before {
+  background: #3b5999;
+}
+
+.shortcut_button .twitter:hover span,
+.shortcut_button .twitter:hover .tooltip,
+.shortcut_button .twitter:hover .tooltip::before {
+  background: #46c1f6;
+}
+
+.shortcut_button .instagram:hover span,
+.shortcut_button .instagram:hover .tooltip,
+.shortcut_button .instagram:hover .tooltip::before {
+  background: #e1306c;
+}
+
+.shortcut_button .youtube:hover span,
+.shortcut_button .youtube:hover .tooltip,
+.shortcut_button .youtube:hover .tooltip::before {
+  background: #de463b;
+}
+.shortcut_button .github:hover span,
+.shortcut_button .github:hover .tooltip,
+.shortcut_button .github:hover .tooltip::before {
+  background: #333;
+}
+
+.shortcut_button a {
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+}
